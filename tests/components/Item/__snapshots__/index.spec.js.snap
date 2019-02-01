@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item renders Item Component renders correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeState": Object {
+        "wishlist": Array [],
+      },
+    }
+  }
+>
+  <Connect(Item)
+    item={
+      Object {
+        "image": "abc",
+        "isPreorder": "",
+        "rating": 4,
+        "reviews": 23,
+        "salePrice": "38",
+        "subTitle": "abc",
+        "suggestion": "abc",
+      }
+    }
+  />
+</ContextProvider>
+`;

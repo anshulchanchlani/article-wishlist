@@ -1,0 +1,8 @@
+stages{
+    stage('Set up'){//configure pre-requiste tools required}
+    stage('Install'){//install npm dependencies of project}
+    stage('Build'){//Build the app by webpack - npm run build}
+    stage('Unit test'){// Run unit tests for the app}
+    stage('Bump the build version')
+    stage('Create an artifact and push to a central repository(Nexus))
+}

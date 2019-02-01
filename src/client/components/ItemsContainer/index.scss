@@ -1,0 +1,19 @@
+.items-list{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+    li{
+        justify-content: center;
+        text-align: center;
+        margin:5px;
+        padding:5px;
+        a{
+            cursor: pointer
+        }
+    }
+}
+.search-result-for-style{
+    margin-left:10px
+}

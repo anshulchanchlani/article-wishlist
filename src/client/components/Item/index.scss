@@ -1,0 +1,19 @@
+.item{
+    font-size:14px;
+    .wrapper-style{
+        &:hover{
+            border:1px solid rgb(199, 198, 198);
+        }
+    }
+}
+
+.item-subtitle{
+    color:rgb(168, 164, 164);
+    text-decoration: none;
+}
+.add-to-wishlist-icon{
+    position: relative;
+    top: 35px;
+    left: 107px;
+    cursor:pointer
+}

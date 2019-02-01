@@ -1,0 +1,115 @@
+{
+  "name": "article-wishlist",
+  "version": "1.0.0",
+  "description": "An article wishlist using React and Redux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev:client": "webpack --watch --mode development --config webpack.dev.js --open",
+    "start:prod": "npm run build && node ./src/server/server.js",
+    "build": "webpack --config webpack.prod.js --mode production",
+    "audit": "lighthouse http://localhost:8082 --view",
+    "dev:server": "nodemon --watch src/server/server.js --exec \"node src/server/server.js\" "
+  },
+  "keywords": [
+    "article",
+    "wishlist",
+    "react",
+    "redux"
+  ],
+  "author": "Anshul Chanchlani <anshulchanchlani@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "axios": "^0.18.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "compression-webpack-plugin": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "copy-webpack-plugin": "^4.6.0",
+    "cors": "^2.8.5",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.5",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "helmet": "^3.15.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-mock-axios": "^2.1.11",
+    "lighthouse": "^4.0.0-alpha.2-3.2.1",
+    "moxios": "^0.4.0",
+    "nodemon": "^1.18.9",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.6.3",
+    "react-grid-system": "^4.4.1",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-star-ratings": "^2.3.0",
+    "react-test-renderer": "^16.7.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-mock-store": "^1.5.3",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.1",
+    "superagent": "^4.1.0",
+    "supertest": "^3.4.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "install": "^0.12.2",
+    "node-sass": "^4.10.0",
+    "npm": "^6.5.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/setup/"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/public/**",
+      "!**/tests/**",
+      "!**/*.test.js",
+      "!**/**/*.json",
+      "!**/styles/**",
+      "!**/webpack.*.js",
+      "!**/Dockerfile"
+    ],
+    "coverageReporters": [
+      "text-summary"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}

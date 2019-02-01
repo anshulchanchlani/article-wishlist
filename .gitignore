@@ -1,0 +1,4 @@
+node_modules
+public/main.js
+public/vendors.js
+./server/flat-file/test.json
